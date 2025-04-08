@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XashPay API Documentation</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="description"
+      content="Xash - Comprehensive documentation for Xash, a powerful platform for bill payments across Africa."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="_media/favicon.ico" />
+    <style>
+      footer {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      #mb-footer a {
+        color: #FA447C;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div align="center">A moment...</div>
+    </div>
+    <footer id="mb-footer"></footer>
+    <script>
+      window.$docsify = {
+        name: "Xash Docs",
+        repo: "joemunapo/developers.xashpay.com",
+        themeColor: "#FA447C",
+        loadSidebar: true,
+        auto2top: true,
+        logo: "/_media/xash.png",
+        autoFooter: {
+          // the name you wish to display as the copyright holder
+          name: " | Xashpay",
+
+          // the URL (personal or company) which clicking the `name` goes to
+          url: "https://xash.co.zw",
+
+          // code to dynamicaly get the current year using JS
+          copyYear: new Date().getFullYear(),
+          // show the privacy policy link
+          policy: false,
+
+          // show the terms of service link
+          terms: false,
+
+          // show the cookies policy link
+          cookies: false,
+
+          // use your own css styles or the built in ones
+          customStyle: false,
+        },
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="https://unpkg.com/@markbattistella/docsify-sidebarfooter@latest"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var sidebarLinks = document.querySelectorAll(".sidebar-nav a");
+        sidebarLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            var sidebar = document.querySelector(".app-sidebar");
+            if (sidebar.classList.contains("app-sidebar-open")) {
+              sidebar.classList.remove("app-sidebar-open");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
